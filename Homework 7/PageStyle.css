@@ -1,0 +1,19 @@
+body {
+      background-color: rgb(0, 28, 0); 
+      color: rgb(78, 141, 33);
+      font-family: 'Courier New', Courier, monospace;
+       }
+
+#SpecificHeader {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+     color:rgb(102, 171, 81)
+}
+
+#SpecificLink {
+    color:rgb(255, 224, 50);
+}
+
+#SpecificHeader2 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+     color:rgb(31, 52, 25)
+}
