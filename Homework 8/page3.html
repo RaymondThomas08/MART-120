@@ -7,9 +7,9 @@
           <script>
             function checkboxes()
           {
-            document.getElementById("fName").style.backgroundColor = "rgb(102, 171, 81";
-            document.getElementById("lName").style.backgroundColor = "rgb(102, 171, 81";
-            document.getElementById("eAdress").style.backgroundColor = "rgb(102, 171, 81";
+            document.getElementById("fName").style.backgroundColor = "rgb(102, 171, 81)";
+            document.getElementById("lName").style.backgroundColor = "rgb(102, 171, 81)";
+            document.getElementById("eAdress").style.backgroundColor = "rgb(102, 171, 81)";
 
             document.getElementById("fNameMessage").innerHTML = "";
             document.getElementById("lNameMessage").innerHTML = "";
@@ -26,7 +26,7 @@
                 document.getElementById("fNameMessage").innerHTML = "* Required Field";
                 document.getElementById("fNameMessage").style.color = "red";
                 isValid = false;
-            }
+           }
             if(lastName == "")
             {
               document.getElementById("lName").focus();
@@ -60,8 +60,23 @@
                   document.getElementById("eAdress").focus();
                   }
             }
-
           return isValid;
+          }
+          function radiobuttons()
+          {
+            var selected = document.querySelector('input[name="optradio"]:checked');
+
+          if(selected == null)
+          {
+            window.alert("Please select Yes or No.");
+          }
+          else if(selected.value == "No")
+          {
+           window.alert("You must accept the terms of agreement to continue.");
+          else
+          {
+            window.alert("Thank you for accepting the terms of agreement.");
+          }
 
           }
           </script>
@@ -102,17 +117,20 @@
          <br /> 
          <div class="form-check">
         <label class="form-check-label">
-        <input type="radio" class="form-check-input" name="optradio">Option 1
+        <input type="radio" class="form-check-input" name="optradio" value="Yes" id="yes">Yes
         </label>
         </div>
         <br />
         <div class="form-check">
         <label class="form-check-label">
-        <input type="radio" class="form-check-input" name="optradio">Option 2
+        <input type="radio" class="form-check-input" name="optradio" value="No" id="no">No
         </label>
+        <br />
+        <br />
+        <button type="button" class="btn btn-danger" onclick='radiobuttons();'>Agree</button>
          </div>
-          <br />
-          <br />
+        <br />
+        <br />
 
         <h3>Turn the page!</h3>
         <a href="page1.html" id="SpecificLink" style="text-decoration:overline;">Go to Homepage --></a>
