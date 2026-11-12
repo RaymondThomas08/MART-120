@@ -56,7 +56,7 @@ background(16, 23, 65);
   moveOB1();
   moveOB2();
 
-//detects if playerhas passed borders
+//detects if player has passed borders
   winPlayer();
 
 //draws object from mouseClicked
